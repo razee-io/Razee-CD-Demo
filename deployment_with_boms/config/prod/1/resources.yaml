@@ -65,7 +65,7 @@ items:
             requests:
               - optional: true
                 options:
-                  url: https://raw.githubusercontent.com/razee-io/Razee-CD-Demo/master/deployment_with_boms/config/prod/<%config%>/resources.yaml
+                  url: https://raw.githubusercontent.com/razee-io/Razee-CD-Demo/master/deployment_with_boms/config/dev/<%config%>/resources.yaml
 
   # Bill of Materials - list of microservices to deploy to the cluster
   - apiVersion: "deploy.razee.io/v1alpha1"
@@ -104,3 +104,6 @@ items:
               - optional: true
                 options:
                   url: https://raw.githubusercontent.com/razee-io/Razee-CD-Demo/master/deployment_with_boms/microservices/redis-slave/<%redis-slave%>/deploy.yaml
+              - optional: true
+                options:
+                  url: https://raw.githubusercontent.com/razee-io/Razee-CD-Demo/master/deployment_with_boms/microservices/frontend/<%frontend%>/deploy.yaml
