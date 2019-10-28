@@ -13,9 +13,10 @@ items:
       name: razee-cd-secrets
     type: Opaque
     data:
-      LD_SDK_KEY: ZGF0YQ==
-      COS_SECRET_KEY: ZGF0YQ==
-      COS_KEY_ID: ZGF0YQ==
+      # Enfoce this in an actual installation. Omit here from the public repo
+      # LD_SDK_KEY: ZGF0YQ==
+      # COS_SECRET_KEY: ZGF0YQ==
+      # COS_KEY_ID: ZGF0YQ==
   - apiVersion: deploy.razee.io/v1alpha1
     kind: FeatureFlagSetLD
     metadata:
