@@ -7,12 +7,12 @@ metadata:
 type: array
 items:
   # Enforce the bootstraped resources
-  - apiVersion: v1
-    kind: Secret
-    metadata:
-      name: razee-cd-secrets
-    type: Opaque
-    data:
+  # - apiVersion: v1
+  #  kind: Secret
+  #  metadata:
+  #    name: razee-cd-secrets
+  #  type: Opaque
+  #  data:
       # Enfoce this in an actual installation. Omit here from the public repo
       # LD_SDK_KEY: ZGF0YQ==
       # COS_SECRET_KEY: ZGF0YQ==
