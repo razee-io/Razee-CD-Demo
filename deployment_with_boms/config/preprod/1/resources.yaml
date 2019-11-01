@@ -39,6 +39,12 @@ items:
             apiVersion: "deploy.razee.io/v1alpha1"
             kind: FeatureFlagSetLD
             name: default-ffsld
+      env:
+        - name: cluster-type
+          valueFrom:
+            configMapKeyRef:
+              name: "cluster-info"
+              key: "type"
       templates:
         - apiVersion: "deploy.razee.io/v1alpha1"
           kind: RemoteResourceS3
@@ -60,7 +66,7 @@ items:
             requests:
               - optional: true
                 options:
-                  url: https://raw.githubusercontent.com/razee-io/Razee-CD-Demo/master/deployment_with_boms/config/dev/<%config%>/resources.yaml
+                  url: https://raw.githubusercontent.com/razee-io/Razee-CD-Demo/master/deployment_with_boms/config/<%cluster-type%>/<%config%>/resources.yaml
 
   # Bill of Materials - list of microservices to deploy to the cluster
   - apiVersion: "deploy.razee.io/v1alpha1"
